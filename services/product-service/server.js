@@ -11,9 +11,9 @@ const serviceRegistry = require('../../shared/serviceRegistry');
 class ProductService {
 constructor() {
 this.app = express();
-this.port = process.env.PORT || 3002;
+	this.port = process.env.PORT || 3003;
 this.serviceName = 'product-service';
-this.serviceUrl = `http://127.0.0.1:${this.port}`;
+	this.serviceUrl = `http://127.0.0.1:${this.port}`;
 this.setupDatabase();
 this.setupMiddleware();
 this.setupRoutes();

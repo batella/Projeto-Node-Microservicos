@@ -34,7 +34,7 @@ process.stdin.once('data', () => resolve());
 console.log('\n3. Verificando serviços...');
 const services = [
 { name: 'User Service', url: 'http://127.0.0.1:3001/health' },
-{ name: 'Product Service', url: 'http://127.0.0.1:3002/health' },
+{ name: 'Product Service', url: 'http://127.0.0.1:3003/health' },
 { name: 'API Gateway', url: 'http://127.0.0.1:3000/health' }
 ];
 let allHealthy = true;
@@ -88,7 +88,7 @@ return;
 console.log('\n6. Testando comunicação...');
 // Teste direto
 try {
-const directResponse = await axios.get('http://127.0.0.1:3002/products', {
+const directResponse = await axios.get('http://127.0.0.1:3003/products', {
 timeout: 5000,
 family: 4
 });

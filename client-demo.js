@@ -355,7 +355,7 @@ console.log(' Schema flexível com documentos aninhados');
 console.error('Erro na demonstração:', error.message);
 console.log('\nVerifique se todos os serviços estão rodando:');
 console.log(' User Service: http://127.0.0.1:3001/health');
-console.log(' Product Service: http://127.0.0.1:3002/health');
+console.log(' Product Service: http://127.0.0.1:3003/health');
 console.log(' API Gateway: http://127.0.0.1:3000/health');
 }
 }

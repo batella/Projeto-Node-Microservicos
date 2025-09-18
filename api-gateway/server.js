@@ -90,14 +90,12 @@ stats: serviceRegistry.getStats()
 });
 // User Service routes - CORRIGIDO
 this.app.use('/api/users', (req, res, next) => {
-console.log(`🔗 Roteando para user-service: ${req.method} $
-{req.originalUrl}`);
+console.log(`🔗 Roteando para user-service: ${req.method} ${req.originalUrl}`);
 this.proxyRequest('user-service', req, res, next);
 });
 // Product Service routes - CORRIGIDO
 this.app.use('/api/products', (req, res, next) => {
-console.log(`🔗 Roteando para product-service: ${req.method} $
-{req.originalUrl}`);
+console.log(`🔗 Roteando para product-service: ${req.method} ${req.originalUrl}`);
 this.proxyRequest('product-service', req, res, next);
 });
 // Endpoints agregados
