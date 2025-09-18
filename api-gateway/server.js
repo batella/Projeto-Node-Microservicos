@@ -132,8 +132,7 @@ service: 'api-gateway'
 // Proxy request to service
 async proxyRequest(serviceName, req, res, next) {
 try {
-console.log(`🔗 Proxy request: ${req.method} ${req.originalUrl} -> $
-{serviceName}`);
+console.log(`🔗 Proxy request: ${req.method} ${req.originalUrl} -> ${serviceName}`);
 // Verificar circuit breaker
 if (this.isCircuitOpen(serviceName)) {
 console.log(` Circuit breaker open for ${serviceName} ⚡`);
@@ -180,7 +179,7 @@ targetPath = '/users';
 } else if (serviceName === 'product-service') {
 // /api/products -> /products
 // /api/products/123 -> /products/123
-targetPath = originalPath.replace('/api/products', '');
+targetPath = originalPath.replace('/api/products', '/products');
 if (!targetPath.startsWith('/')) {
 targetPath = '/' + targetPath;
 }
@@ -411,6 +410,7 @@ message: 'Erro na busca'
 // Helper para chamar serviços
 async callService(serviceName, path, method = 'GET', authHeader = null, params
 = {}) {
+    console.log(`aqui`);
 const service = serviceRegistry.discover(serviceName);
 const config = {
 method,
@@ -423,6 +423,7 @@ config.headers = { Authorization: authHeader };
 if (method === 'GET' && Object.keys(params).length > 0) {
 config.params = params;
 }
+console.log(`AQUI`);
 const response = await axios(config);
 return response.data;
 }

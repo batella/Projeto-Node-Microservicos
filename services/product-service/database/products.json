@@ -194,7 +194,7 @@
     "name": "Tablet",
     "description": "Tablet 1T",
     "price": 3500,
-    "stock": 1,
+    "stock": 0,
     "category": {
       "name": "Eletrônicos",
       "slug": "eletronicos"
@@ -220,8 +220,41 @@
       "createdByName": "mario mario"
     },
     "createdAt": "2025-09-18T00:43:07.305Z",
-    "updatedAt": "2025-09-18T01:12:53.525Z",
-    "metadata.lastStockUpdate": "2025-09-18T01:12:53.522Z",
+    "updatedAt": "2025-09-18T23:04:39.039Z",
+    "metadata.lastStockUpdate": "2025-09-18T23:04:39.037Z",
     "metadata.lastStockUpdateBy": "529b193d-1c33-4d54-bbee-939eb53e2a5b"
+  },
+  {
+    "id": "71a795c8-1c09-431e-83ee-4dc942a71f1b",
+    "name": "Tablet",
+    "description": "Tablet 1T",
+    "price": 3500,
+    "stock": 3,
+    "category": {
+      "name": "Eletrônicos",
+      "slug": "eletronicos"
+    },
+    "images": [
+      "https://via.placeholder.com/300x300?text=Smartphone"
+    ],
+    "tags": [
+      "Tabler",
+      "tech"
+    ],
+    "specifications": {
+      "brand": "Apple",
+      "model": "Ipad",
+      "storage": "1T",
+      "ram": "8GB",
+      "camera": "14MP"
+    },
+    "active": true,
+    "featured": false,
+    "metadata": {
+      "createdBy": "529b193d-1c33-4d54-bbee-939eb53e2a5b",
+      "createdByName": "mario mario"
+    },
+    "createdAt": "2025-09-18T23:09:04.964Z",
+    "updatedAt": "2025-09-18T23:09:04.964Z"
   }
 ]
