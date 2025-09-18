@@ -1,0 +1,116 @@
+[
+  {
+    "id": "697debe1-7035-4a4a-aaaf-8a5ba77b35f7",
+    "email": "admin@microservices.com",
+    "username": "admin",
+    "password": "$2a$12$pz6UIDrs/XX91771BtVXHO.WYj4xyiCKVQKYGUDRoKJybWpbHTtQ6",
+    "firstName": "Administrador",
+    "lastName": "Sistema",
+    "role": "admin",
+    "status": "active",
+    "createdAt": "2025-09-16T22:28:37.981Z",
+    "updatedAt": "2025-09-16T22:28:37.982Z"
+  },
+  {
+    "id": "ba4e7892-3d2e-46b4-bfa5-2def370aac00",
+    "email": "demo1758065142314@microservices.com",
+    "username": "demo1758065142314",
+    "password": "$2a$12$msl7Q/yPX8lVZu0rJej8X.wGrdgYGbbihmVY.bftlCc0057xtNjDy",
+    "firstName": "Demo",
+    "lastName": "User",
+    "role": "user",
+    "status": "active",
+    "profile": {
+      "bio": null,
+      "avatar": null,
+      "preferences": {
+        "theme": "light",
+        "language": "pt-BR"
+      }
+    },
+    "metadata": {
+      "registrationDate": "2025-09-16T23:25:42.632Z",
+      "lastLogin": null,
+      "loginCount": 0
+    },
+    "createdAt": "2025-09-16T23:25:42.633Z",
+    "updatedAt": "2025-09-16T23:25:42.633Z"
+  },
+  {
+    "id": "02c9af90-5867-46ea-9402-51431d5a608a",
+    "email": "test@example.com",
+    "username": "testuser",
+    "password": "$2a$12$./NMd8j5xq4DmCGD8av20eNCMksRhZReBa4EhCNi0JbD5d1mEx4kK",
+    "firstName": "Test",
+    "lastName": "User",
+    "role": "user",
+    "status": "active",
+    "profile": {
+      "bio": null,
+      "avatar": null,
+      "preferences": {
+        "theme": "light",
+        "language": "pt-BR"
+      }
+    },
+    "metadata": {
+      "registrationDate": "2025-09-17T22:06:10.561Z",
+      "lastLogin": null,
+      "loginCount": 0
+    },
+    "createdAt": "2025-09-17T22:06:10.562Z",
+    "updatedAt": "2025-09-17T22:06:10.562Z"
+  },
+  {
+    "id": "aa467f50-9ae8-48b5-9281-306eeedaf3e3",
+    "email": "caio@example.com",
+    "username": "caiobatella",
+    "password": "$2a$12$4G3CNFtbh0i1C.yIhn7/JuOK0.PMsvIA85M8kPSXa3tacMZppj2dC",
+    "firstName": "caio",
+    "lastName": "batella",
+    "role": "user",
+    "status": "active",
+    "profile": {
+      "bio": null,
+      "avatar": null,
+      "preferences": {
+        "theme": "light",
+        "language": "pt-BR"
+      }
+    },
+    "metadata": {
+      "registrationDate": "2025-09-17T22:16:11.009Z",
+      "lastLogin": null,
+      "loginCount": 0
+    },
+    "createdAt": "2025-09-17T22:16:11.010Z",
+    "updatedAt": "2025-09-17T22:16:11.010Z"
+  },
+  {
+    "id": "529b193d-1c33-4d54-bbee-939eb53e2a5b",
+    "email": "mario@example.com",
+    "username": "mario",
+    "password": "$2a$12$1MIKtGzcFaXV38xudkVtQ.Cvtmm5aUs/2PRfKoU8hlJ4XD6UH6kyO",
+    "firstName": "mario",
+    "lastName": "mario",
+    "role": "user",
+    "status": "active",
+    "profile": {
+      "bio": null,
+      "avatar": null,
+      "preferences": {
+        "theme": "light",
+        "language": "pt-BR"
+      }
+    },
+    "metadata": {
+      "registrationDate": "2025-09-17T22:29:42.598Z",
+      "lastLogin": null,
+      "loginCount": 0
+    },
+    "createdAt": "2025-09-17T22:29:42.599Z",
+    "updatedAt": "2025-09-18T21:36:06.275Z",
+    "metadata.lastLogin": "2025-09-18T21:36:06.273Z",
+    "metadata.loginCount": 1
+  }
+]

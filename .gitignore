@@ -1,0 +1,29 @@
+# Node.js dependencies
+node_modules/
+
+# VS Code settings
+.vscode/
+
+# JetBrains IDEs (IntelliJ, WebStorm, etc)
+.idea/
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+
+# npm debug files
+npm-debug.log*
+
+# Optional: coverage and build
+coverage/
+build/
+dist/
+
+# Optional: ignore all .env* files
+.env*
