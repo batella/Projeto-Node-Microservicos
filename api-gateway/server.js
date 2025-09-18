@@ -408,7 +408,6 @@ message: 'Erro na busca'
 // Helper para chamar serviços
 async callService(serviceName, path, method = 'GET', authHeader = null, params
 = {}) {
-    console.log(`aqui`);
 const service = serviceRegistry.discover(serviceName);
 const config = {
 method,
@@ -421,7 +420,6 @@ config.headers = { Authorization: authHeader };
 if (method === 'GET' && Object.keys(params).length > 0) {
 config.params = params;
 }
-console.log(`AQUI`);
 const response = await axios(config);
 return response.data;
 }
