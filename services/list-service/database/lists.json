@@ -1,0 +1,38 @@
+[
+  {
+    "id": "6e1974c6-51d4-43b1-bee6-c294b66b68d1",
+    "userId": "529b193d-1c33-4d54-bbee-939eb53e2a5b",
+    "name": "Lista do Mario Atualizada",
+    "description": "Lista de compras do Mario Atualizada",
+    "status": "active",
+    "items": [
+      {
+        "itemId": "3add192d-e244-491f-8636-70a99f8a8619",
+        "itemName": "Smartphone",
+        "quantity": "5",
+        "unit": "",
+        "estimatedPrice": 1200,
+        "purchased": true,
+        "notes": "",
+        "addedAt": "2025-09-19T21:38:38.696Z"
+      },
+      {
+        "itemId": "51b8969b-a0fd-49ab-a5c7-96abffb6e067",
+        "itemName": "Camiseta Básica",
+        "quantity": "10",
+        "unit": "",
+        "estimatedPrice": 39.99,
+        "purchased": false,
+        "notes": "",
+        "addedAt": "2025-09-19T21:38:38.705Z"
+      }
+    ],
+    "summary": {
+      "totalItems": 2,
+      "purchasedItems": 1,
+      "estimatedTotal": 6399.9
+    },
+    "createdAt": "2025-09-19T21:38:38.707Z",
+    "updatedAt": "2025-09-20T23:42:25.116Z"
+  }
+]

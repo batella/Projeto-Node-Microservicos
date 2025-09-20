@@ -194,7 +194,7 @@
     "name": "Tablet",
     "description": "Tablet 1T",
     "price": 3500,
-    "stock": 0,
+    "stock": 5,
     "category": {
       "name": "Eletrônicos",
       "slug": "eletronicos"

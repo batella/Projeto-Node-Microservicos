@@ -27,3 +27,4 @@ dist/
 
 # Optional: ignore all .env* files
 .env*
+Task.txt

@@ -98,6 +98,11 @@ this.app.use('/api/products', (req, res, next) => {
 console.log(`🔗 Roteando para product-service: ${req.method} ${req.originalUrl}`);
 this.proxyRequest('product-service', req, res, next);
 });
+// List Service routes
+this.app.use('/api/lists', (req, res, next) => {
+	console.log(`🔗 Roteando para list-service: ${req.method} ${req.originalUrl}`);
+	this.proxyRequest('list-service', req, res, next);
+});
 // Endpoints agregados
 this.app.get('/api/dashboard', this.getDashboard.bind(this));
 this.app.get('/api/search', this.globalSearch.bind(this));
@@ -185,6 +190,21 @@ targetPath = '/' + targetPath;
 if (targetPath === '/' || targetPath === '') {
 targetPath = '/products';
 }
+		} else if (serviceName === 'list-service') {
+			// /api/lists -> /lists
+			// /api/lists/123 -> /lists/123
+			// /api/lists/:id/items -> /lists/:id/items
+			// /api/lists/:id/products -> /lists/:id/items (padronizar para items)
+			targetPath = originalPath.replace('/api/lists', '/lists');
+			// Padronizar qualquer /products para /items no path do list-service
+			targetPath = targetPath.replace(/\/products(\/|$)/, '/items$1');
+			if (!targetPath.startsWith('/')) {
+				targetPath = '/' + targetPath;
+			}
+			// Se path vazio, usar /lists
+			if (targetPath === '/' || targetPath === '') {
+				targetPath = '/lists';
+			}
 }
 const targetUrl = `${service.url}${targetPath}`;
 console.log(`🔗 Target URL: ${targetUrl}`);

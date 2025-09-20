@@ -1,4 +1,19 @@
 {
+  "product-service": {
+    "url": "http://127.0.0.1:3003",
+    "version": "1.0.0",
+    "database": "JSON-NoSQL",
+    "endpoints": [
+      "/health",
+      "/products",
+      "/categories",
+      "/search"
+    ],
+    "registeredAt": 1758411474192,
+    "lastHealthCheck": 1758412016688,
+    "healthy": true,
+    "pid": 26472
+  },
   "user-service": {
     "url": "http://localhost:3001",
     "version": "1.0.0",
@@ -10,24 +25,19 @@
       "/users",
       "/search"
     ],
-    "registeredAt": 1758235918347,
-    "lastHealthCheck": 1758238228811,
+    "registeredAt": 1758411478084,
+    "lastHealthCheck": 1758412018210,
     "healthy": true,
-    "pid": 28544
+    "pid": 27180
   },
-  "product-service": {
-    "url": "http://127.0.0.1:3003",
-    "version": "1.0.0",
-    "database": "JSON-NoSQL",
-    "endpoints": [
-      "/health",
-      "/products",
-      "/categories",
-      "/search"
-    ],
-    "registeredAt": 1758237464937,
-    "lastHealthCheck": 1758238245052,
+  "list-service": {
+    "url": "http://localhost:3004",
+    "host": "localhost",
+    "port": 3004,
+    "protocol": "http",
+    "registeredAt": 1758411739499,
+    "lastHealthCheck": 1758412016709,
     "healthy": true,
-    "pid": 5908
+    "pid": 14272
   }
 }
