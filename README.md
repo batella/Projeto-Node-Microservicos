@@ -142,6 +142,8 @@ curl --location 'http://localhost:3000/api/lists' \
 - O client-demo.js automatiza o fluxo de testes e demonstração do sistema.
 
 ## Autor
-Projeto acadêmico desenvolvido para disciplina de Laboratório de Aplicações Móveis.
+Caio Batella
+
+Projeto acadêmico desenvolvido para disciplina de Laboratório de Desenvolvimento de Aplicações Móveis e Distribuídas.
 
 ---
