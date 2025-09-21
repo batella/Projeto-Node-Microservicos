@@ -128,35 +128,6 @@
     "updatedAt": "2025-09-16T22:28:37.578Z"
   },
   {
-    "id": "95102892-a2d2-49b7-a24e-0816b64392ea",
-    "name": "Produto Demo NoSQL",
-    "description": "Produto criado via demo com banco NoSQL",
-    "price": 99.99,
-    "stock": 10,
-    "category": {
-      "name": "Demo",
-      "slug": "demo"
-    },
-    "images": [],
-    "tags": [
-      "demo",
-      "nosql",
-      "teste"
-    ],
-    "specifications": {
-      "material": "Digital",
-      "cor": "Virtual"
-    },
-    "active": true,
-    "featured": true,
-    "metadata": {
-      "createdBy": "ba4e7892-3d2e-46b4-bfa5-2def370aac00",
-      "createdByName": "Demo User"
-    },
-    "createdAt": "2025-09-16T23:25:47.899Z",
-    "updatedAt": "2025-09-16T23:25:47.899Z"
-  },
-  {
     "id": "3add192d-e244-491f-8636-70a99f8a8619",
     "name": "Smartphone",
     "description": "Smartphone 128GB",
@@ -256,5 +227,505 @@
     },
     "createdAt": "2025-09-18T23:09:04.964Z",
     "updatedAt": "2025-09-18T23:09:04.964Z"
+  },
+  {
+    "id": "cdcdd80d-f2f7-41b8-9341-1a912a5ab07f",
+    "name": "Arroz Integral",
+    "description": "Pacote de arroz integral 1kg",
+    "price": 8.99,
+    "stock": 20,
+    "category": {
+      "name": "Alimentos",
+      "slug": "alimentos"
+    },
+    "images": [],
+    "tags": [
+      "arroz",
+      "grãos"
+    ],
+    "specifications": {},
+    "active": true,
+    "featured": false,
+    "metadata": {
+      "createdBy": "529b193d-1c33-4d54-bbee-939eb53e2a5b",
+      "createdByName": "mario mario"
+    },
+    "createdAt": "2025-09-21T16:59:54.158Z",
+    "updatedAt": "2025-09-21T16:59:54.158Z"
+  },
+  {
+    "id": "6d032e51-031b-45f7-9985-2f9c6d59e421",
+    "name": "Feijão Preto",
+    "description": "Feijão preto premium 1kg",
+    "price": 9.49,
+    "stock": 15,
+    "category": {
+      "name": "Alimentos",
+      "slug": "alimentos"
+    },
+    "images": [],
+    "tags": [
+      "feijão",
+      "grãos"
+    ],
+    "specifications": {},
+    "active": true,
+    "featured": false,
+    "metadata": {
+      "createdBy": "529b193d-1c33-4d54-bbee-939eb53e2a5b",
+      "createdByName": "mario mario"
+    },
+    "createdAt": "2025-09-21T17:00:01.978Z",
+    "updatedAt": "2025-09-21T17:00:01.979Z"
+  },
+  {
+    "id": "c8ada6c8-7a24-4a7b-8a0f-19aacc0e3faf",
+    "name": "Macarrão Espaguete",
+    "description": "Macarrão espaguete tradicional 500g",
+    "price": 4.99,
+    "stock": 30,
+    "category": {
+      "name": "Alimentos",
+      "slug": "alimentos"
+    },
+    "images": [],
+    "tags": [
+      "macarrão",
+      "massa"
+    ],
+    "specifications": {},
+    "active": true,
+    "featured": false,
+    "metadata": {
+      "createdBy": "529b193d-1c33-4d54-bbee-939eb53e2a5b",
+      "createdByName": "mario mario"
+    },
+    "createdAt": "2025-09-21T17:00:09.167Z",
+    "updatedAt": "2025-09-21T17:00:09.167Z"
+  },
+  {
+    "id": "90d3297a-96e2-4aa8-b676-1d9bdb8c83ee",
+    "name": "Óleo de Soja",
+    "description": "Óleo de soja refinado 900ml",
+    "price": 7.49,
+    "stock": 25,
+    "category": {
+      "name": "Alimentos",
+      "slug": "alimentos"
+    },
+    "images": [],
+    "tags": [
+      "óleo",
+      "soja"
+    ],
+    "specifications": {},
+    "active": true,
+    "featured": false,
+    "metadata": {
+      "createdBy": "529b193d-1c33-4d54-bbee-939eb53e2a5b",
+      "createdByName": "mario mario"
+    },
+    "createdAt": "2025-09-21T17:00:17.098Z",
+    "updatedAt": "2025-09-21T17:00:17.098Z"
+  },
+  {
+    "id": "ab18c185-5c02-4ddf-98ca-f9b497e2f00e",
+    "name": "Detergente Líquido",
+    "description": "Detergente líquido neutro 500ml",
+    "price": 2.99,
+    "stock": 40,
+    "category": {
+      "name": "Limpeza",
+      "slug": "limpeza"
+    },
+    "images": [],
+    "tags": [
+      "detergente",
+      "louça"
+    ],
+    "specifications": {},
+    "active": true,
+    "featured": false,
+    "metadata": {
+      "createdBy": "529b193d-1c33-4d54-bbee-939eb53e2a5b",
+      "createdByName": "mario mario"
+    },
+    "createdAt": "2025-09-21T17:00:23.512Z",
+    "updatedAt": "2025-09-21T17:00:23.512Z"
+  },
+  {
+    "id": "9638fe15-450f-4cb2-b8da-42f75ba2fa0e",
+    "name": "Desinfetante Floral",
+    "description": "Desinfetante aroma floral 1L",
+    "price": 5.99,
+    "stock": 18,
+    "category": {
+      "name": "Limpeza",
+      "slug": "limpeza"
+    },
+    "images": [],
+    "tags": [
+      "desinfetante",
+      "floral"
+    ],
+    "specifications": {},
+    "active": true,
+    "featured": false,
+    "metadata": {
+      "createdBy": "529b193d-1c33-4d54-bbee-939eb53e2a5b",
+      "createdByName": "mario mario"
+    },
+    "createdAt": "2025-09-21T17:00:29.488Z",
+    "updatedAt": "2025-09-21T17:00:29.488Z"
+  },
+  {
+    "id": "74f0e4a3-8658-48cb-ad0c-90e819d29b2e",
+    "name": "Sabão em Pó",
+    "description": "Sabão em pó para roupas 800g",
+    "price": 10.99,
+    "stock": 22,
+    "category": {
+      "name": "Limpeza",
+      "slug": "limpeza"
+    },
+    "images": [],
+    "tags": [
+      "sabão",
+      "roupas"
+    ],
+    "specifications": {},
+    "active": true,
+    "featured": false,
+    "metadata": {
+      "createdBy": "529b193d-1c33-4d54-bbee-939eb53e2a5b",
+      "createdByName": "mario mario"
+    },
+    "createdAt": "2025-09-21T17:00:35.248Z",
+    "updatedAt": "2025-09-21T17:00:35.248Z"
+  },
+  {
+    "id": "58b0230c-b2e9-4154-9032-3c2cf55403e7",
+    "name": "Esponja Multiuso",
+    "description": "Esponja multiuso para limpeza",
+    "price": 3.49,
+    "stock": 35,
+    "category": {
+      "name": "Limpeza",
+      "slug": "limpeza"
+    },
+    "images": [],
+    "tags": [
+      "esponja",
+      "multiuso"
+    ],
+    "specifications": {},
+    "active": true,
+    "featured": false,
+    "metadata": {
+      "createdBy": "529b193d-1c33-4d54-bbee-939eb53e2a5b",
+      "createdByName": "mario mario"
+    },
+    "createdAt": "2025-09-21T17:00:41.171Z",
+    "updatedAt": "2025-09-21T17:00:41.171Z"
+  },
+  {
+    "id": "763a9620-0cb3-4210-9ba8-469f79451f13",
+    "name": "Sabonete em Barra",
+    "description": "Sabonete em barra hidratante 90g",
+    "price": 2.49,
+    "stock": 50,
+    "category": {
+      "name": "Higiene",
+      "slug": "higiene"
+    },
+    "images": [],
+    "tags": [
+      "sabonete",
+      "barra"
+    ],
+    "specifications": {},
+    "active": true,
+    "featured": false,
+    "metadata": {
+      "createdBy": "529b193d-1c33-4d54-bbee-939eb53e2a5b",
+      "createdByName": "mario mario"
+    },
+    "createdAt": "2025-09-21T17:00:46.570Z",
+    "updatedAt": "2025-09-21T17:00:46.570Z"
+  },
+  {
+    "id": "ca40af3e-eb30-46d4-911a-a77113ea02f3",
+    "name": "Shampoo Anticaspa",
+    "description": "Shampoo anticaspa 200ml",
+    "price": 12.99,
+    "stock": 20,
+    "category": {
+      "name": "Higiene",
+      "slug": "higiene"
+    },
+    "images": [],
+    "tags": [
+      "shampoo",
+      "anticaspa"
+    ],
+    "specifications": {},
+    "active": true,
+    "featured": false,
+    "metadata": {
+      "createdBy": "529b193d-1c33-4d54-bbee-939eb53e2a5b",
+      "createdByName": "mario mario"
+    },
+    "createdAt": "2025-09-21T17:00:51.795Z",
+    "updatedAt": "2025-09-21T17:00:51.795Z"
+  },
+  {
+    "id": "e052eaa5-d5ba-4c8d-9316-a05002f143b2",
+    "name": "Creme Dental",
+    "description": "Creme dental branqueador 90g",
+    "price": 6.99,
+    "stock": 28,
+    "category": {
+      "name": "Higiene",
+      "slug": "higiene"
+    },
+    "images": [],
+    "tags": [
+      "creme dental",
+      "branqueador"
+    ],
+    "specifications": {},
+    "active": true,
+    "featured": false,
+    "metadata": {
+      "createdBy": "aa467f50-9ae8-48b5-9281-306eeedaf3e3",
+      "createdByName": "caio batella"
+    },
+    "createdAt": "2025-09-21T17:02:48.281Z",
+    "updatedAt": "2025-09-21T17:02:48.281Z"
+  },
+  {
+    "id": "eda24b1d-40ae-4d01-bbdc-7c1d50aa08f4",
+    "name": "Desodorante Aerosol",
+    "description": "Desodorante aerosol masculino 150ml",
+    "price": 13.49,
+    "stock": 16,
+    "category": {
+      "name": "Higiene",
+      "slug": "higiene"
+    },
+    "images": [],
+    "tags": [
+      "desodorante",
+      "aerosol"
+    ],
+    "specifications": {},
+    "active": true,
+    "featured": false,
+    "metadata": {
+      "createdBy": "aa467f50-9ae8-48b5-9281-306eeedaf3e3",
+      "createdByName": "caio batella"
+    },
+    "createdAt": "2025-09-21T17:02:52.605Z",
+    "updatedAt": "2025-09-21T17:02:52.606Z"
+  },
+  {
+    "id": "b902bf3a-1067-4d9d-8bfe-bdc348c7fb43",
+    "name": "Água Mineral",
+    "description": "Água mineral sem gás 1,5L",
+    "price": 2.99,
+    "stock": 60,
+    "category": {
+      "name": "Bebidas",
+      "slug": "bebidas"
+    },
+    "images": [],
+    "tags": [
+      "água",
+      "mineral"
+    ],
+    "specifications": {},
+    "active": true,
+    "featured": false,
+    "metadata": {
+      "createdBy": "aa467f50-9ae8-48b5-9281-306eeedaf3e3",
+      "createdByName": "caio batella"
+    },
+    "createdAt": "2025-09-21T17:02:57.506Z",
+    "updatedAt": "2025-09-21T17:02:57.506Z"
+  },
+  {
+    "id": "76009195-7c60-463e-ad54-af42fe485798",
+    "name": "Refrigerante Cola",
+    "description": "Refrigerante sabor cola 2L",
+    "price": 7.99,
+    "stock": 25,
+    "category": {
+      "name": "Bebidas",
+      "slug": "bebidas"
+    },
+    "images": [],
+    "tags": [
+      "refrigerante",
+      "cola"
+    ],
+    "specifications": {},
+    "active": true,
+    "featured": false,
+    "metadata": {
+      "createdBy": "aa467f50-9ae8-48b5-9281-306eeedaf3e3",
+      "createdByName": "caio batella"
+    },
+    "createdAt": "2025-09-21T17:03:02.565Z",
+    "updatedAt": "2025-09-21T17:03:02.565Z"
+  },
+  {
+    "id": "a49b6ab6-ca0d-4557-8514-75fde8dd13da",
+    "name": "Suco de Laranja",
+    "description": "Suco de laranja natural 1L",
+    "price": 6.49,
+    "stock": 30,
+    "category": {
+      "name": "Bebidas",
+      "slug": "bebidas"
+    },
+    "images": [],
+    "tags": [
+      "suco",
+      "laranja"
+    ],
+    "specifications": {},
+    "active": true,
+    "featured": false,
+    "metadata": {
+      "createdBy": "aa467f50-9ae8-48b5-9281-306eeedaf3e3",
+      "createdByName": "caio batella"
+    },
+    "createdAt": "2025-09-21T17:03:12.818Z",
+    "updatedAt": "2025-09-21T17:03:12.818Z"
+  },
+  {
+    "id": "43e1d8ac-4527-45e6-8bf1-87d2616a2ed6",
+    "name": "Cerveja Pilsen",
+    "description": "Cerveja pilsen lata 350ml",
+    "price": 3.99,
+    "stock": 40,
+    "category": {
+      "name": "Bebidas",
+      "slug": "bebidas"
+    },
+    "images": [],
+    "tags": [
+      "cerveja",
+      "pilsen"
+    ],
+    "specifications": {},
+    "active": true,
+    "featured": false,
+    "metadata": {
+      "createdBy": "aa467f50-9ae8-48b5-9281-306eeedaf3e3",
+      "createdByName": "caio batella"
+    },
+    "createdAt": "2025-09-21T17:03:19.100Z",
+    "updatedAt": "2025-09-21T17:03:19.100Z"
+  },
+  {
+    "id": "bfa5e915-94df-4ecc-9f01-b7ddb6efddcd",
+    "name": "Pão Francês",
+    "description": "Pão francês fresco 500g",
+    "price": 5.49,
+    "stock": 25,
+    "category": {
+      "name": "Padaria",
+      "slug": "padaria"
+    },
+    "images": [],
+    "tags": [
+      "pão",
+      "francês"
+    ],
+    "specifications": {},
+    "active": true,
+    "featured": false,
+    "metadata": {
+      "createdBy": "aa467f50-9ae8-48b5-9281-306eeedaf3e3",
+      "createdByName": "caio batella"
+    },
+    "createdAt": "2025-09-21T17:03:24.500Z",
+    "updatedAt": "2025-09-21T17:03:24.500Z"
+  },
+  {
+    "id": "1a754ae6-bc04-4143-b874-9e0fd1415dde",
+    "name": "Bolo de Chocolate",
+    "description": "Bolo de chocolate 400g",
+    "price": 14.99,
+    "stock": 10,
+    "category": {
+      "name": "Padaria",
+      "slug": "padaria"
+    },
+    "images": [],
+    "tags": [
+      "bolo",
+      "chocolate"
+    ],
+    "specifications": {},
+    "active": true,
+    "featured": false,
+    "metadata": {
+      "createdBy": "aa467f50-9ae8-48b5-9281-306eeedaf3e3",
+      "createdByName": "caio batella"
+    },
+    "createdAt": "2025-09-21T17:03:30.592Z",
+    "updatedAt": "2025-09-21T17:03:30.592Z"
+  },
+  {
+    "id": "98f789a3-305f-49e1-a646-437d80aeaef5",
+    "name": "Croissant",
+    "description": "Croissant recheado 80g",
+    "price": 4.99,
+    "stock": 18,
+    "category": {
+      "name": "Padaria",
+      "slug": "padaria"
+    },
+    "images": [],
+    "tags": [
+      "croissant",
+      "recheado"
+    ],
+    "specifications": {},
+    "active": true,
+    "featured": false,
+    "metadata": {
+      "createdBy": "aa467f50-9ae8-48b5-9281-306eeedaf3e3",
+      "createdByName": "caio batella"
+    },
+    "createdAt": "2025-09-21T17:03:37.663Z",
+    "updatedAt": "2025-09-21T17:03:37.663Z"
+  },
+  {
+    "id": "04a85804-2a71-46dc-a1ae-58b8d75ea3e0",
+    "name": "Rosquinha de Coco",
+    "description": "Rosquinha de coco 200g",
+    "price": 7.99,
+    "stock": 12,
+    "category": {
+      "name": "Padaria",
+      "slug": "padaria"
+    },
+    "images": [],
+    "tags": [
+      "rosquinha",
+      "coco"
+    ],
+    "specifications": {},
+    "active": true,
+    "featured": false,
+    "metadata": {
+      "createdBy": "aa467f50-9ae8-48b5-9281-306eeedaf3e3",
+      "createdByName": "caio batella"
+    },
+    "createdAt": "2025-09-21T17:03:43.092Z",
+    "updatedAt": "2025-09-21T17:03:43.092Z"
   }
 ]

@@ -17,6 +17,11 @@ this.serviceName = 'product-service';
 this.setupDatabase();
 this.setupMiddleware();
 this.setupRoutes();
+ // Logar todas as rotas registradas
+ console.log('Rotas registradas:');
+ this.app._router.stack
+   .filter(r => r.route)
+   .forEach(r => console.log(`${Object.keys(r.route.methods).join(', ').toUpperCase()} ${r.route.path}`));
 this.setupErrorHandling();
 this.seedInitialData();
 }
@@ -199,17 +204,17 @@ endpoints: [
 });
 // Product routes
 this.app.get('/products', this.getProducts.bind(this));
+// Category routes (extraídas dos produtos) - deve vir antes de /products/:id
+this.app.get('/products/categories', this.getCategories.bind(this));
 this.app.get('/products/:id', this.getProduct.bind(this));
 this.app.post('/products', this.authMiddleware.bind(this),
-this.createProduct.bind(this));
+	this.createProduct.bind(this));
 this.app.put('/products/:id', this.authMiddleware.bind(this),
-this.updateProduct.bind(this));
+	this.updateProduct.bind(this));
 this.app.delete('/products/:id', this.authMiddleware.bind(this),
-this.deleteProduct.bind(this));
+	this.deleteProduct.bind(this));
 this.app.put('/products/:id/stock', this.authMiddleware.bind(this),
-this.updateStock.bind(this));
-// Category routes (extraídas dos produtos)
-this.app.get('/categories', this.getCategories.bind(this));
+	this.updateStock.bind(this));
 // Search route
 this.app.get('/search', this.searchProducts.bind(this));
 }
@@ -265,91 +270,89 @@ message: 'Serviço de autenticação indisponível'
 }
 // Get products (com filtros e paginação)
 async getProducts(req, res) {
-try {
-const {
-page = 1,
-limit = 10,
-category,
-minPrice,
-maxPrice,
-search,
-active = true,
-featured
-} = req.query;
-const skip = (page - 1) * parseInt(limit);
-// Filtros NoSQL flexíveis
-const filter = { active: active === 'true' };
-// Filtrar por categoria
-if (category) {
-filter['category.slug'] = category;
-}
-// Filtrar por destaque
-if (featured !== undefined) {
-filter.featured = featured === 'true';
-}
-// Filtrar por preço
-if (minPrice) {
-filter.price = { $gte: parseFloat(minPrice) };
-}
-if (maxPrice) {
-if (filter.price) {
-filter.price.$lte = parseFloat(maxPrice);
-} else {
-filter.price = { $lte: parseFloat(maxPrice) };
-}
-}
-let products;
-// Se há busca por texto, usar método de search
-if (search) {
-products = await this.productsDb.search(search, ['name',
-'description', 'tags']);
-// Aplicar outros filtros manualmente
-products = products.filter(product => {
-for (const [key, value] of Object.entries(filter)) {
-if (key === 'price') {
-if (value.$gte && product.price < value.$gte) return
-false;
-if (value.$lte && product.price > value.$lte) return
-false;
-} else if (key.includes('.')) {
-// Campos aninhados (ex: category.slug)
-const keys = key.split('.');
-const productValue = keys.reduce((obj, k) => obj?.[k],
-product);
-if (productValue !== value) return false;
-} else if (product[key] !== value) {
-return false;
-}
-}
-return true;
-});
-// Aplicar paginação manual
-products = products.slice(skip, skip + parseInt(limit));
-} else {
-products = await this.productsDb.find(filter, {
-skip: skip,
-limit: parseInt(limit),
-sort: { createdAt: -1 }
-});
-}
-const total = await this.productsDb.count(filter);
-res.json({
-success: true,
-data: products,
-pagination: {
-page: parseInt(page),
-limit: parseInt(limit),
-total: total,
-pages: Math.ceil(total / parseInt(limit))
-}
-});
-} catch (error) {
-console.error('Erro ao buscar produtos:', error);
-res.status(500).json({
-success: false,
-message: 'Erro interno do servidor'
-});
-}
+	try {
+		const {
+			page = 1,
+			limit = 10,
+			category,
+			minPrice,
+			maxPrice,
+			search,
+			active = true,
+			featured
+		} = req.query;
+		const skip = (page - 1) * parseInt(limit);
+		// Filtros NoSQL flexíveis
+	const filter = { active: active == true || active == 'true' };
+		// Filtrar por categoria
+		if (category) {
+			filter['category.slug'] = category;
+		}
+		// Filtrar por destaque
+		if (featured !== undefined) {
+			filter.featured = featured === 'true';
+		}
+		// Filtrar por preço
+		if (minPrice) {
+			filter.price = { $gte: parseFloat(minPrice) };
+		}
+		if (maxPrice) {
+			if (filter.price) {
+				filter.price.$lte = parseFloat(maxPrice);
+			} else {
+				filter.price = { $lte: parseFloat(maxPrice) };
+			}
+		}
+		console.log('Filtro usado em getProducts:', filter);
+		let products;
+		// Se há busca por texto, usar método de search
+		if (search) {
+			products = await this.productsDb.search(search, ['name', 'description', 'tags']);
+			// Aplicar outros filtros manualmente
+			products = products.filter(product => {
+				for (const [key, value] of Object.entries(filter)) {
+					if (key === 'price') {
+						if (value.$gte && product.price < value.$gte) return false;
+						if (value.$lte && product.price > value.$lte) return false;
+					} else if (key.includes('.')) {
+						// Campos aninhados (ex: category.slug)
+						const keys = key.split('.');
+						const productValue = keys.reduce((obj, k) => obj?.[k], product);
+						if (productValue !== value) return false;
+					} else if (product[key] !== value) {
+						return false;
+					}
+				}
+				return true;
+			});
+			// Aplicar paginação manual
+			products = products.slice(skip, skip + parseInt(limit));
+		} else {
+			products = await this.productsDb.find(filter, {
+				skip: skip,
+				limit: parseInt(limit),
+				sort: { createdAt: -1 }
+			});
+		}
+		console.log('Total de produtos encontrados:', products.length);
+		const total = await this.productsDb.count(filter);
+		res.json({
+			success: true,
+			data: products,
+			pagination: {
+				page: parseInt(page),
+				limit: parseInt(limit),
+				total: total,
+				pages: Math.ceil(total / parseInt(limit))
+			}
+		});
+	} catch (error) {
+		console.error('Erro ao buscar produtos:', error);
+		res.status(500).json({
+			success: false,
+			message: 'Erro interno do servidor'
+		});
+	}
 }
 // Get product by ID
 async getProduct(req, res) {
@@ -570,37 +573,41 @@ message: 'Erro interno do servidor'
 }
 // Get categories (extraídas dos produtos)
 async getCategories(req, res) {
-try {
-const products = await this.productsDb.find({ active: true });
-// Extrair categorias únicas dos produtos (demonstrando flexibilidade NoSQL)
-const categoriesMap = new Map();
-products.forEach(product => {
-if (product.category) {
-const key = product.category.slug || product.category.name;
-if (!categoriesMap.has(key)) {
-categoriesMap.set(key, {
-name: product.category.name,
-slug: product.category.slug ||
-product.category.name.toLowerCase().replace(/\s+/g, '-'),
-productCount: 0
-});
-}
-categoriesMap.get(key).productCount++;
-}
-});
-const categories = Array.from(categoriesMap.values())
-.sort((a, b) => a.name.localeCompare(b.name));
-res.json({
-success: true,
-data: categories
-});
-} catch (error) {
-console.error('Erro ao buscar categorias:', error);
-res.status(500).json({
-success: false,
-message: 'Erro interno do servidor'
-});
-}
+	try {
+		console.log('Recebida requisição GET /products/categories');
+		const products = await this.productsDb.find({ active: true });
+		console.log(`Produtos ativos encontrados: ${products.length}`);
+		// Extrair categorias únicas dos produtos (demonstrando flexibilidade NoSQL)
+		const categoriesMap = new Map();
+		products.forEach(product => {
+			if (product.category) {
+				const key = product.category.slug || product.category.name;
+				if (!categoriesMap.has(key)) {
+					categoriesMap.set(key, {
+						name: product.category.name,
+						slug: product.category.slug ||
+							product.category.name.toLowerCase().replace(/\s+/g, '-'),
+						productCount: 0
+					});
+				}
+				categoriesMap.get(key).productCount++;
+			}
+		});
+		const categories = Array.from(categoriesMap.values())
+			.sort((a, b) => a.name.localeCompare(b.name));
+		console.log(`Categorias extraídas: ${JSON.stringify(categories)}`);
+		console.log('Respondendo com categorias:', categories);
+		res.json({
+			success: true,
+			data: categories
+		});
+	} catch (error) {
+		console.error('Erro ao buscar categorias:', error);
+		res.status(500).json({
+			success: false,
+			message: 'Erro interno do servidor'
+		});
+	}
 }
 // Search products (demonstrando busca NoSQL)
 async searchProducts(req, res) {

@@ -84,7 +84,9 @@
       "loginCount": 0
     },
     "createdAt": "2025-09-17T22:16:11.010Z",
-    "updatedAt": "2025-09-17T22:16:11.010Z"
+    "updatedAt": "2025-09-21T17:01:32.020Z",
+    "metadata.lastLogin": "2025-09-21T17:01:32.019Z",
+    "metadata.loginCount": 1
   },
   {
     "id": "529b193d-1c33-4d54-bbee-939eb53e2a5b",
@@ -109,8 +111,8 @@
       "loginCount": 0
     },
     "createdAt": "2025-09-17T22:29:42.599Z",
-    "updatedAt": "2025-09-20T23:20:43.907Z",
-    "metadata.lastLogin": "2025-09-20T23:20:43.904Z",
+    "updatedAt": "2025-09-21T16:34:01.938Z",
+    "metadata.lastLogin": "2025-09-21T16:34:01.936Z",
     "metadata.loginCount": 1
   },
   {
@@ -137,5 +139,55 @@
     },
     "createdAt": "2025-09-18T23:08:11.100Z",
     "updatedAt": "2025-09-18T23:08:11.100Z"
+  },
+  {
+    "id": "bc7042a9-9519-442d-a581-5412513da6d1",
+    "email": "demo1758468594423@microservices.com",
+    "username": "demo1758468594423",
+    "password": "$2a$12$rGWoS8K2D075MuXjgZ9JFutXy4Q3wfzCkWJ5K9vM.DkqcJBQIyzIu",
+    "firstName": "Demo",
+    "lastName": "User",
+    "role": "user",
+    "status": "active",
+    "profile": {
+      "bio": null,
+      "avatar": null,
+      "preferences": {
+        "theme": "light",
+        "language": "pt-BR"
+      }
+    },
+    "metadata": {
+      "registrationDate": "2025-09-21T15:29:54.868Z",
+      "lastLogin": null,
+      "loginCount": 0
+    },
+    "createdAt": "2025-09-21T15:29:54.868Z",
+    "updatedAt": "2025-09-21T15:29:54.868Z"
+  },
+  {
+    "id": "40db1d40-ddaf-4187-b50e-0073db541a8c",
+    "email": "demo1758472849191@microservices.com",
+    "username": "demo1758472849191",
+    "password": "$2a$12$ZdjX4uH8gGogLASgy4Ep1utWEhJbOf0MnWWoTS9wM9EhE.5OVIFEi",
+    "firstName": "Demo",
+    "lastName": "User",
+    "role": "user",
+    "status": "active",
+    "profile": {
+      "bio": null,
+      "avatar": null,
+      "preferences": {
+        "theme": "light",
+        "language": "pt-BR"
+      }
+    },
+    "metadata": {
+      "registrationDate": "2025-09-21T16:40:49.617Z",
+      "lastLogin": null,
+      "loginCount": 0
+    },
+    "createdAt": "2025-09-21T16:40:49.618Z",
+    "updatedAt": "2025-09-21T16:40:49.618Z"
   }
 ]

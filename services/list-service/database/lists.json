@@ -34,5 +34,35 @@
     },
     "createdAt": "2025-09-19T21:38:38.707Z",
     "updatedAt": "2025-09-20T23:42:25.116Z"
+  },
+  {
+    "id": "b070173a-320f-48cb-9419-b6555beebba7",
+    "userId": "bc7042a9-9519-442d-a581-5412513da6d1",
+    "name": "Lista Demo",
+    "description": "Lista criada via client-demo",
+    "status": "active",
+    "items": [],
+    "summary": {
+      "totalItems": 0,
+      "purchasedItems": 0,
+      "estimatedTotal": 0
+    },
+    "createdAt": "2025-09-21T15:29:59.127Z",
+    "updatedAt": "2025-09-21T15:29:59.131Z"
+  },
+  {
+    "id": "57b6c519-bcea-4508-988c-8d2b653f6172",
+    "userId": "40db1d40-ddaf-4187-b50e-0073db541a8c",
+    "name": "Lista Demo",
+    "description": "Lista criada via client-demo",
+    "status": "active",
+    "items": [],
+    "summary": {
+      "totalItems": 0,
+      "purchasedItems": 0,
+      "estimatedTotal": 0
+    },
+    "createdAt": "2025-09-21T16:40:54.047Z",
+    "updatedAt": "2025-09-21T16:40:54.050Z"
   }
 ]

@@ -199,41 +199,42 @@ console.error('Erro ao remover do índice:', error);
 }
 }
 matchesFilter(document, filter) {
-// Suporte a $or e $and no filtro
-return Object.entries(filter).every(([key, value]) => {
-	if (key === '$or' && Array.isArray(value)) {
-		// Pelo menos um dos filtros deve bater
-		return value.some(cond => this.matchesFilter(document, cond));
-	}
-	if (key === '$and' && Array.isArray(value)) {
-		// Todos os filtros devem bater
-		return value.every(cond => this.matchesFilter(document, cond));
-	}
-	const docValue = this.getNestedValue(document, key);
-	if (typeof value === 'object' && value !== null) {
-		// Operadores especiais
-		if (value.$regex) {
-			const regex = new RegExp(value.$regex, value.$options || 'i');
-			return regex.test(docValue);
+	// Suporte a $or e $and no filtro
+	return Object.entries(filter).every(([key, value]) => {
+		if (key === '$or' && Array.isArray(value)) {
+			// Pelo menos um dos filtros deve bater
+			return value.some(cond => this.matchesFilter(document, cond));
 		}
-		if (value.$in) {
-			return value.$in.includes(docValue);
+		if (key === '$and' && Array.isArray(value)) {
+			// Todos os filtros devem bater
+			return value.every(cond => this.matchesFilter(document, cond));
 		}
-		if (value.$gt) {
-			return docValue > value.$gt;
+		const docValue = this.getNestedValue(document, key);
+		if (typeof value === 'object' && value !== null) {
+			// Operadores especiais
+			if (value.$regex) {
+				const regex = new RegExp(value.$regex, value.$options || 'i');
+				return regex.test(docValue);
+			}
+			if (value.$in) {
+				return value.$in.includes(docValue);
+			}
+			if (value.$gt) {
+				return docValue > value.$gt;
+			}
+			if (value.$lt) {
+				return docValue < value.$lt;
+			}
+			if (value.$gte) {
+				return docValue >= value.$gte;
+			}
+			if (value.$lte) {
+				return docValue <= value.$lte;
+			}
 		}
-		if (value.$lt) {
-			return docValue < value.$lt;
-		}
-		if (value.$gte) {
-			return docValue >= value.$gte;
-		}
-		if (value.$lte) {
-			return docValue <= value.$lte;
-		}
-	}
-	return docValue === value;
-});
+		console.log(`[matchesFilter] Campo: ${key}, Valor do doc:`, docValue, ', Valor do filtro:', value);
+		return docValue === value;
+	});
 }
 getNestedValue(obj, path) {
 return path.split('.').reduce((current, key) => {

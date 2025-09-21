@@ -1,5 +1,70 @@
 const axios = require('axios');
 class MicroservicesClient {
+	// Criar lista (requer autenticação)
+	async createList(listData) {
+		try {
+			console.log('\nCriando lista...');
+			if (!this.authToken) {
+				throw new Error('Token de autenticação necessário');
+			}
+			const response = await this.api.post('/api/lists', listData);
+			if (response.data && response.data.id) {
+				console.log('Lista criada:', response.data.name);
+				return response.data;
+			} else {
+				throw new Error('Falha na criação da lista');
+			}
+		} catch (error) {
+			const message = error.response?.data?.message || error.message;
+			console.log('Erro ao criar lista:', message);
+			throw error;
+		}
+	}
+
+	// Adicionar item à lista
+	async addItemToList(listId, itemData) {
+		try {
+			console.log(`\nAdicionando item à lista ${listId}...`);
+			if (!this.authToken) {
+				throw new Error('Token de autenticação necessário');
+			}
+			const response = await this.api.post(`/api/lists/${listId}/items`, itemData);
+			if (response.data && response.data.id) {
+				console.log('Item adicionado à lista:', itemData.itemId);
+				return response.data;
+			} else {
+				throw new Error('Falha ao adicionar item à lista');
+			}
+		} catch (error) {
+			const message = error.response?.data?.message || error.message;
+			console.log('Erro ao adicionar item à lista:', message);
+			throw error;
+		}
+	}
+
+	// Visualizar listas do usuário
+	async getLists() {
+		try {
+			console.log('\nBuscando listas do usuário...');
+			if (!this.authToken) {
+				throw new Error('Token de autenticação necessário');
+			}
+			const response = await this.api.get('/api/lists');
+			if (Array.isArray(response.data)) {
+				console.log(`Encontradas ${response.data.length} listas`);
+				response.data.forEach((list, idx) => {
+					console.log(` ${idx + 1}. ${list.name} (${list.id}) - ${list.items.length} itens`);
+				});
+				return response.data;
+			} else {
+				throw new Error('Falha ao buscar listas');
+			}
+		} catch (error) {
+			const message = error.response?.data?.message || error.message;
+			console.log('Erro ao buscar listas:', message);
+			throw error;
+		}
+	}
 constructor(gatewayUrl = 'http://127.0.0.1:3000') {
 this.gatewayUrl = gatewayUrl;
 this.authToken = null;
@@ -126,8 +191,7 @@ if (response.data.success) {
 const categories = response.data.data;
 console.log(`Encontradas ${categories.length} categorias`);
 categories.forEach((category, index) => {
-console.log(` ${index + 1}. ${category.name} - $
-{category.productCount} produtos`);
+	console.log(` ${index + 1}. ${category.name} - ${category.productCount} produtos`);
 });
 return response.data;
 } else {
@@ -159,16 +223,12 @@ if (dashboard.services_status) {
 Object.entries(dashboard.services_status).forEach(([serviceName, serviceInfo]) => {
 const status = serviceInfo.healthy ? 'SAUDÁVEL' :
 'INDISPONÍVEL';
-console.log(` ${serviceName}: ${status} ($
-{serviceInfo.url})`);
+	console.log(` ${serviceName}: ${status} (${serviceInfo.url})`);
 });
 }
-console.log(` Usuários disponíveis: $
-{dashboard.data?.users?.available ? 'Sim' : 'Não'}`);
-console.log(` Produtos disponíveis: $
-{dashboard.data?.products?.available ? 'Sim' : 'Não'}`);
-console.log(` Categorias disponíveis: $
-{dashboard.data?.categories?.available ? 'Sim' : 'Não'}`);
+	console.log(` Usuários disponíveis: ${dashboard.data?.users?.available ? 'Sim' : 'Não'}`);
+	console.log(` Produtos disponíveis: ${dashboard.data?.products?.available ? 'Sim' : 'Não'}`);
+	console.log(` Categorias disponíveis: ${dashboard.data?.categories?.available ? 'Sim' : 'Não'}`);
 return response.data;
 } else {
 throw new Error(response.data.message || 'Falha ao carregar dashboard');
@@ -189,21 +249,17 @@ if (response.data.success) {
 const results = response.data.data;
 console.log(`Resultados para "${results.query}":`);
 if (results.products?.available) {
-console.log(` Produtos encontrados: $
-{results.products.results.length}`);
+console.log(` Produtos encontrados: ${results.products.results.length}`);
 results.products.results.forEach((product, index) => {
-console.log(` ${index + 1}. ${product.name} - R$ $
-{product.price}`);
+console.log(` ${index + 1}. ${product.name} - R$ ${product.price}`);
 });
 } else {
 console.log(' Serviço de produtos indisponível');
 }
 if (results.users?.available) {
-console.log(` Usuários encontrados: $
-{results.users.results.length}`);
+console.log(` Usuários encontrados: ${results.users.results.length}`);
 results.users.results.forEach((user, index) => {
-console.log(` ${index + 1}. ${user.firstName} $
-{user.lastName} (@${user.username})`);
+console.log(` ${index + 1}. ${user.firstName} ${user.lastName} (@${user.username})`);
 });
 } else if (results.users?.error) {
 console.log(' Busca de usuários requer autenticação');
@@ -259,152 +315,113 @@ console.log('=====================================');
 console.log('Demo: Microsserviços com NoSQL');
 console.log('=====================================');
 try {
-// 1. Verificar saúde dos serviços
-await this.checkHealth();
-await this.delay(2000);
-// 2. Registrar usuário
-const uniqueId = Date.now();
-const userData = {
-email: `demo${uniqueId}@microservices.com`,
-username: `demo${uniqueId}`,
-password: 'demo123456',
-firstName: 'Demo',
-lastName: 'User'
+		// 1. Verificar saúde dos serviços
+		await this.checkHealth();
+		await this.delay(2000);
+		// 2. Registrar usuário
+		const uniqueId = Date.now();
+		const userData = {
+			email: `demo${uniqueId}@microservices.com`,
+			username: `demo${uniqueId}`,
+			password: 'demo123456',
+			firstName: 'Demo',
+			lastName: 'User'
+		};
+		let authSuccessful = false;
+		try {
+			await this.register(userData);
+			authSuccessful = true;
+		} catch (error) {
+			// Se registro falhar, tentar login com admin
+			console.log('\nTentando login com usuário admin...');
+			try {
+				await this.login({
+					identifier: 'admin@microservices.com',
+					password: 'admin123'
+				});
+				authSuccessful = true;
+			} catch (loginError) {
+				console.log('Login com admin falhou, continuando sem autenticação...');
+				authSuccessful = false;
+			}
+		}
+		await this.delay(1000);
+		// 3. Buscar produtos
+		const productsResp = await this.getProducts({ limit: 5 });
+		await this.delay(1000);
+		// 4. Buscar categorias
+		await this.getCategories();
+		await this.delay(1000);
+		// 5. Fazer busca
+		await this.search('smartphone');
+		await this.delay(1000);
+		// 6. Criar lista e adicionar itens
+		if (authSuccessful && this.authToken) {
+			// Criar lista de teste
+			const listData = {
+				name: 'Lista Demo',
+				description: 'Lista criada via client-demo',
+				items: []
+			};
+			const list = await this.createList(listData);
+			await this.delay(1000);
+			// Adicionar dois itens à lista (usando os dois primeiros produtos)
+			if (productsResp && productsResp.data && productsResp.data.length >= 2) {
+				const prod1 = productsResp.data[0];
+				const prod2 = productsResp.data[1];
+				await this.addItemToList(list.id, { itemId: prod1.id, quantity: 2 });
+				await this.delay(500);
+				await this.addItemToList(list.id, { itemId: prod2.id, quantity: 1 });
+				await this.delay(500);
+			}
+			// Visualizar listas do usuário
+			await this.getLists();
+			await this.delay(1000);
+			// Visualizar dashboard
+			try {
+				await this.getDashboard();
+				await this.delay(1000);
+			} catch (error) {
+				console.log('Dashboard não disponível:', error.message);
+			}
+		} else {
+			console.log('\nOperações autenticadas puladas (sem token válido)');
+		}
+		console.log('\n=====================================');
+		console.log('Demonstração concluída com sucesso!');
+		console.log('=====================================');
+		console.log('Padrões demonstrados:');
+		console.log(' Service Discovery via Registry');
+		console.log(' API Gateway com roteamento');
+		console.log(' Circuit Breaker pattern');
+		console.log(' Comunicação inter-service');
+		console.log(' Aggregated endpoints');
+		console.log(' Health checks distribuídos');
+		console.log(' Database per Service (NoSQL)');
+		console.log(' JSON-based document storage');
+		console.log(' Full-text search capabilities');
+		console.log(' Schema flexível com documentos aninhados');
+	} catch (error) {
+		console.error('Erro na demonstração:', error.message);
+		console.log('\nVerifique se todos os serviços estão rodando:');
+		console.log(' User Service: http://127.0.0.1:3001/health');
+		console.log(' Product Service: http://127.0.0.1:3003/health');
+			console.log(' API Gateway: http://127.0.0.1:3000/health');
+		}
+	}
+}
+
+// Função utilitária para delay
+MicroservicesClient.prototype.delay = function (ms) {
+	return new Promise(resolve => setTimeout(resolve, ms));
 };
-let authSuccessful = false;
-try {
-await this.register(userData);
-authSuccessful = true;
-} catch (error) {
-// Se registro falhar, tentar login com admin
-console.log('\nTentando login com usuário admin...');
-try {
-await this.login({
-identifier: 'admin@microservices.com',
-password: 'admin123'
-});
-authSuccessful = true;
-} catch (loginError) {
-console.log('Login com admin falhou, continuando sem autenticação...');
-authSuccessful = false;
-}
-}
-await this.delay(1000);
-// 3. Buscar produtos
-await this.getProducts({ limit: 5 });
-await this.delay(1000);
-// 4. Buscar categorias
-await this.getCategories();
-await this.delay(1000);
-// 5. Fazer busca
-await this.search('smartphone');
-await this.delay(1000);
-// 6. Se autenticado, fazer operações que requerem auth
-if (authSuccessful && this.authToken) {
-// Buscar dashboard
-try {
-await this.getDashboard();
-await this.delay(1000);
-} catch (error) {
-console.log('Dashboard não disponível:', error.message);
-}
-// Criar produto de teste
-try {
-const newProduct = await this.createProduct({
-name: 'Produto Demo NoSQL',
-description: 'Produto criado via demo com banco NoSQL',
-price: 99.99,
-stock: 10,
-category: {
-name: 'Demo',
-slug: 'demo'
-},
-tags: ['demo', 'nosql', 'teste'],
-specifications: {
-material: 'Digital',
-cor: 'Virtual'
-},
-featured: true
-});
-if (newProduct.success) {
-await this.delay(1000);
-console.log(`Produto criado: ${newProduct.data.name} (ID: $
-{newProduct.data.id})`);
-}
-} catch (error) {
-console.log('Criação de produto falhou:', error.message);
-}
-} else {
-console.log('\nOperações autenticadas puladas (sem token válido)');
-}
-console.log('\n=====================================');
-console.log('Demonstração concluída com sucesso!');
-console.log('=====================================');
-console.log('Padrões demonstrados:');
-console.log(' Service Discovery via Registry');
-console.log(' API Gateway com roteamento');
-console.log(' Circuit Breaker pattern');
-console.log(' Comunicação inter-service');
-console.log(' Aggregated endpoints');
-console.log(' Health checks distribuídos');
-console.log(' Database per Service (NoSQL)');
-console.log(' JSON-based document storage');
-console.log(' Full-text search capabilities');
-console.log(' Schema flexível com documentos aninhados');
-} catch (error) {
-console.error('Erro na demonstração:', error.message);
-console.log('\nVerifique se todos os serviços estão rodando:');
-console.log(' User Service: http://127.0.0.1:3001/health');
-console.log(' Product Service: http://127.0.0.1:3003/health');
-console.log(' API Gateway: http://127.0.0.1:3000/health');
-}
-}
-// Helper para delay
-delay(ms) {
-return new Promise(resolve => setTimeout(resolve, ms));
-}
-}
-// Executar demonstração
+
+// Bloco principal para executar a demonstração
 async function main() {
-// Verificar se os argumentos foram passados
-const args = process.argv.slice(2);
-if (args.includes('--help') || args.includes('-h')) {
-console.log('Uso: node client-demo.js [opções]');
-console.log('');
-console.log('Opções:');
-console.log(' --health Verificar apenas saúde dos serviços');
-console.log(' --products Listar apenas produtos');
-console.log(' --search Fazer busca (requer termo: --search=termo)');
-console.log(' --help Mostrar esta ajuda');
-console.log('');
-console.log('Sem argumentos: Executar demonstração completa');
-return;
+	const client = new MicroservicesClient();
+	await client.runDemo();
 }
-const client = new MicroservicesClient();
-try {
-if (args.includes('--health')) {
-await client.checkHealth();
-} else if (args.includes('--products')) {
-await client.getProducts();
-} else if (args.some(arg => arg.startsWith('--search'))) {
-const searchArg = args.find(arg => arg.startsWith('--search'));
-const searchTerm = searchArg.includes('=') ? searchArg.split('=')[1] :
-'smartphone';
-await client.search(searchTerm);
-} else {
-// Demonstração completa
-await client.runDemo();
-}
-} catch (error) {
-console.error('Erro na execução:', error.message);
-process.exit(1);
-}
-}
-// Executar se chamado diretamente
+
 if (require.main === module) {
-main().catch(error => {
-console.error('Erro crítico:', error.message);
-process.exit(1);
-});
+	main();
 }
-module.exports = MicroservicesClient;
