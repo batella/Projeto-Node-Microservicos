@@ -88,7 +88,7 @@ return true;
 }
 return false;
 }
-// Health check de um serviço
+// Health check de um serviço 
 updateHealth(serviceName, healthy) {
 const services = this.readRegistry();
 if (services[serviceName]) {

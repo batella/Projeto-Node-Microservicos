@@ -84,8 +84,8 @@
       "loginCount": 0
     },
     "createdAt": "2025-09-17T22:16:11.010Z",
-    "updatedAt": "2025-09-21T17:01:32.020Z",
-    "metadata.lastLogin": "2025-09-21T17:01:32.019Z",
+    "updatedAt": "2025-09-22T21:33:45.410Z",
+    "metadata.lastLogin": "2025-09-22T21:33:45.407Z",
     "metadata.loginCount": 1
   },
   {
@@ -189,5 +189,186 @@
     },
     "createdAt": "2025-09-21T16:40:49.618Z",
     "updatedAt": "2025-09-21T16:40:49.618Z"
+  },
+  {
+    "id": "9b254b21-688e-4c1b-a2b3-eec1dce0df89",
+    "email": "demo1758575048575@microservices.com",
+    "username": "demo1758575048575",
+    "password": "$2a$12$nZ6KP8UVdgQUOEQIKVw.YuAFT/T6TtJzfVrS2QDQXoiRS2Noq.Saa",
+    "firstName": "Demo",
+    "lastName": "User",
+    "role": "user",
+    "status": "active",
+    "profile": {
+      "bio": null,
+      "avatar": null,
+      "preferences": {
+        "theme": "light",
+        "language": "pt-BR"
+      }
+    },
+    "metadata": {
+      "registrationDate": "2025-09-22T21:04:09.073Z",
+      "lastLogin": null,
+      "loginCount": 0
+    },
+    "createdAt": "2025-09-22T21:04:09.074Z",
+    "updatedAt": "2025-09-22T21:04:09.074Z"
+  },
+  {
+    "id": "3009926a-1322-465a-bf76-503824334602",
+    "email": "mart",
+    "username": "mart",
+    "password": "$2a$12$eyD8N.Zv5S9lGAWNIdNwsemosJLRjqGVu6f.kWnbrqk.uW12sGeJW",
+    "firstName": "mart",
+    "lastName": "mart",
+    "role": "user",
+    "status": "active",
+    "profile": {
+      "bio": null,
+      "avatar": null,
+      "preferences": {
+        "theme": "light",
+        "language": "pt-BR"
+      }
+    },
+    "metadata": {
+      "registrationDate": "2025-09-22T21:31:19.528Z",
+      "lastLogin": null,
+      "loginCount": 0
+    },
+    "createdAt": "2025-09-22T21:31:19.531Z",
+    "updatedAt": "2025-09-22T21:34:04.896Z",
+    "metadata.lastLogin": "2025-09-22T21:34:04.894Z",
+    "metadata.loginCount": 1
+  },
+  {
+    "id": "5f87ead6-9136-4415-88fb-f16a75e66e2c",
+    "email": "demo1759007135542@microservices.com",
+    "username": "demo1759007135542",
+    "password": "$2a$12$11KFIGKLhU22WVGaW76VYeekN3b7xcdfvN8PU1TLxq5b5Mv7rgHMm",
+    "firstName": "Demo",
+    "lastName": "User",
+    "role": "user",
+    "status": "active",
+    "profile": {
+      "bio": null,
+      "avatar": null,
+      "preferences": {
+        "theme": "light",
+        "language": "pt-BR"
+      }
+    },
+    "metadata": {
+      "registrationDate": "2025-09-27T21:05:35.987Z",
+      "lastLogin": null,
+      "loginCount": 0
+    },
+    "createdAt": "2025-09-27T21:05:35.988Z",
+    "updatedAt": "2025-09-27T21:05:35.988Z"
+  },
+  {
+    "id": "4f1a3063-e801-42d1-8b34-abf845673cb5",
+    "email": "demo1759007291062@microservices.com",
+    "username": "demo1759007291062",
+    "password": "$2a$12$ZXKGfC3y8jEaviTf59uJK.mEy06Gu7Sz1qRFPBTIPmHGUcjnaDXNm",
+    "firstName": "Demo",
+    "lastName": "User",
+    "role": "user",
+    "status": "active",
+    "profile": {
+      "bio": null,
+      "avatar": null,
+      "preferences": {
+        "theme": "light",
+        "language": "pt-BR"
+      }
+    },
+    "metadata": {
+      "registrationDate": "2025-09-27T21:08:11.989Z",
+      "lastLogin": null,
+      "loginCount": 0
+    },
+    "createdAt": "2025-09-27T21:08:11.991Z",
+    "updatedAt": "2025-09-27T21:08:11.991Z"
+  },
+  {
+    "id": "f0d247d2-bd7b-464f-ba11-b65826cc63ae",
+    "email": "apresentacao@example.com",
+    "username": "apresentacao",
+    "password": "$2a$12$iNLmK1LCNN.VbXGqnQufOOCaxa21yxcQ0v0zcI8OrXR0t/zJME1eS",
+    "firstName": "apresentacao",
+    "lastName": "sobrenome",
+    "role": "user",
+    "status": "active",
+    "profile": {
+      "bio": null,
+      "avatar": null,
+      "preferences": {
+        "theme": "light",
+        "language": "pt-BR"
+      }
+    },
+    "metadata": {
+      "registrationDate": "2025-09-27T21:10:20.662Z",
+      "lastLogin": null,
+      "loginCount": 0
+    },
+    "createdAt": "2025-09-27T21:10:20.673Z",
+    "updatedAt": "2025-09-27T21:10:40.602Z",
+    "metadata.lastLogin": "2025-09-27T21:10:40.596Z",
+    "metadata.loginCount": 1
+  },
+  {
+    "id": "7d164f25-26b5-4a42-a74f-9f67a79d88ab",
+    "email": "demo1759008194438@microservices.com",
+    "username": "demo1759008194438",
+    "password": "$2a$12$IcToR9fWKVPP4bIS8g361u./CzDjt6uCaQqZnAZpQJiNvxTFJCmSO",
+    "firstName": "Demo",
+    "lastName": "User",
+    "role": "user",
+    "status": "active",
+    "profile": {
+      "bio": null,
+      "avatar": null,
+      "preferences": {
+        "theme": "light",
+        "language": "pt-BR"
+      }
+    },
+    "metadata": {
+      "registrationDate": "2025-09-27T21:23:15.165Z",
+      "lastLogin": null,
+      "loginCount": 0
+    },
+    "createdAt": "2025-09-27T21:23:15.174Z",
+    "updatedAt": "2025-09-27T21:23:15.174Z"
+  },
+  {
+    "id": "b7de4c95-1f0f-43d6-8d38-274e1ab4e1f0",
+    "email": "apresentacao2@example.com",
+    "username": "apresentacao2",
+    "password": "$2a$12$Duc.Wth7tUmCpyqMb2Us.eZSM1jmjaKwhwlDkKVQzz187Hhu63lxi",
+    "firstName": "apresentacao2",
+    "lastName": "sobrenome2",
+    "role": "user",
+    "status": "active",
+    "profile": {
+      "bio": null,
+      "avatar": null,
+      "preferences": {
+        "theme": "light",
+        "language": "pt-BR"
+      }
+    },
+    "metadata": {
+      "registrationDate": "2025-09-27T21:26:04.496Z",
+      "lastLogin": null,
+      "loginCount": 0
+    },
+    "createdAt": "2025-09-27T21:26:04.498Z",
+    "updatedAt": "2025-09-27T21:26:19.482Z",
+    "metadata.lastLogin": "2025-09-27T21:26:19.477Z",
+    "metadata.loginCount": 1
   }
 ]

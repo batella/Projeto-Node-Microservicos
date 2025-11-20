@@ -64,5 +64,149 @@
     },
     "createdAt": "2025-09-21T16:40:54.047Z",
     "updatedAt": "2025-09-21T16:40:54.050Z"
+  },
+  {
+    "id": "d9e78aa2-9e44-4812-ba89-a3699d62801b",
+    "userId": "9b254b21-688e-4c1b-a2b3-eec1dce0df89",
+    "name": "Lista Demo",
+    "description": "Lista criada via client-demo",
+    "status": "active",
+    "items": [
+      {
+        "itemId": "04a85804-2a71-46dc-a1ae-58b8d75ea3e0",
+        "itemName": "",
+        "quantity": 2,
+        "unit": "",
+        "estimatedPrice": 0,
+        "purchased": false,
+        "notes": "",
+        "addedAt": "2025-09-22T21:04:14.435Z"
+      },
+      {
+        "itemId": "98f789a3-305f-49e1-a646-437d80aeaef5",
+        "itemName": "",
+        "quantity": 1,
+        "unit": "",
+        "estimatedPrice": 0,
+        "purchased": false,
+        "notes": "",
+        "addedAt": "2025-09-22T21:04:14.987Z"
+      }
+    ],
+    "summary": {
+      "totalItems": 2,
+      "purchasedItems": 0,
+      "estimatedTotal": 0
+    },
+    "createdAt": "2025-09-22T21:04:13.362Z",
+    "updatedAt": "2025-09-22T21:04:14.988Z"
+  },
+  {
+    "id": "dfdac665-672e-4833-937a-8d8707dcc528",
+    "userId": "5f87ead6-9136-4415-88fb-f16a75e66e2c",
+    "name": "Lista Demo",
+    "description": "Lista criada via client-demo",
+    "status": "active",
+    "items": [
+      {
+        "itemId": "d6fe58fb-277a-40c6-a7c7-2c774705e803",
+        "itemName": "",
+        "quantity": 2,
+        "unit": "",
+        "estimatedPrice": 0,
+        "purchased": false,
+        "notes": "",
+        "addedAt": "2025-09-27T21:05:41.372Z"
+      },
+      {
+        "itemId": "04a85804-2a71-46dc-a1ae-58b8d75ea3e0",
+        "itemName": "",
+        "quantity": 1,
+        "unit": "",
+        "estimatedPrice": 0,
+        "purchased": false,
+        "notes": "",
+        "addedAt": "2025-09-27T21:05:41.934Z"
+      }
+    ],
+    "summary": {
+      "totalItems": 2,
+      "purchasedItems": 0,
+      "estimatedTotal": 0
+    },
+    "createdAt": "2025-09-27T21:05:40.302Z",
+    "updatedAt": "2025-09-27T21:05:41.936Z"
+  },
+  {
+    "id": "ce14e603-3a8c-4047-8359-e24a820597a5",
+    "userId": "4f1a3063-e801-42d1-8b34-abf845673cb5",
+    "name": "Lista Demo",
+    "description": "Lista criada via client-demo",
+    "status": "active",
+    "items": [
+      {
+        "itemId": "d6fe58fb-277a-40c6-a7c7-2c774705e803",
+        "itemName": "",
+        "quantity": 2,
+        "unit": "",
+        "estimatedPrice": 0,
+        "purchased": false,
+        "notes": "",
+        "addedAt": "2025-09-27T21:08:17.847Z"
+      },
+      {
+        "itemId": "04a85804-2a71-46dc-a1ae-58b8d75ea3e0",
+        "itemName": "",
+        "quantity": 1,
+        "unit": "",
+        "estimatedPrice": 0,
+        "purchased": false,
+        "notes": "",
+        "addedAt": "2025-09-27T21:08:18.480Z"
+      }
+    ],
+    "summary": {
+      "totalItems": 2,
+      "purchasedItems": 0,
+      "estimatedTotal": 0
+    },
+    "createdAt": "2025-09-27T21:08:16.678Z",
+    "updatedAt": "2025-09-27T21:08:18.483Z"
+  },
+  {
+    "id": "f0732bfb-1836-4e77-b681-44806a5a8be3",
+    "userId": "7d164f25-26b5-4a42-a74f-9f67a79d88ab",
+    "name": "Lista Demo",
+    "description": "Lista criada via client-demo",
+    "status": "active",
+    "items": [
+      {
+        "itemId": "f7b676ce-9582-4e75-9a90-de41a246aca8",
+        "itemName": "",
+        "quantity": 2,
+        "unit": "",
+        "estimatedPrice": 0,
+        "purchased": false,
+        "notes": "",
+        "addedAt": "2025-09-27T21:23:21.514Z"
+      },
+      {
+        "itemId": "829fc7f3-f82a-414b-8caf-521627c60c8a",
+        "itemName": "",
+        "quantity": 1,
+        "unit": "",
+        "estimatedPrice": 0,
+        "purchased": false,
+        "notes": "",
+        "addedAt": "2025-09-27T21:23:22.109Z"
+      }
+    ],
+    "summary": {
+      "totalItems": 2,
+      "purchasedItems": 0,
+      "estimatedTotal": 0
+    },
+    "createdAt": "2025-09-27T21:23:20.402Z",
+    "updatedAt": "2025-09-27T21:23:22.112Z"
   }
 ]

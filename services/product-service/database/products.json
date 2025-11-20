@@ -727,5 +727,144 @@
     },
     "createdAt": "2025-09-21T17:03:43.092Z",
     "updatedAt": "2025-09-21T17:03:43.092Z"
+  },
+  {
+    "id": "d6fe58fb-277a-40c6-a7c7-2c774705e803",
+    "name": "Pão doce",
+    "description": "Pão doce unidade",
+    "price": 4.99,
+    "stock": 12,
+    "category": {
+      "name": "Padaria",
+      "slug": "padaria"
+    },
+    "images": [],
+    "tags": [
+      "pão",
+      "doce"
+    ],
+    "specifications": {},
+    "active": true,
+    "featured": false,
+    "metadata": {
+      "createdBy": "3009926a-1322-465a-bf76-503824334602",
+      "createdByName": "mart mart"
+    },
+    "createdAt": "2025-09-22T21:35:59.073Z",
+    "updatedAt": "2025-09-22T21:35:59.073Z"
+  },
+  {
+    "id": "829fc7f3-f82a-414b-8caf-521627c60c8a",
+    "name": "PC Gamer",
+    "description": "Pc gamer i59400f, 1660 super",
+    "price": 5000,
+    "stock": 3,
+    "category": {
+      "name": "Eletrônicos",
+      "slug": "eletronicos"
+    },
+    "images": [
+      ""
+    ],
+    "tags": [
+      "computador",
+      "tech"
+    ],
+    "specifications": {
+      "brand": "Pichau",
+      "model": "pc gamer",
+      "storage": "1T",
+      "ram": "16GB"
+    },
+    "active": true,
+    "featured": false,
+    "metadata": {
+      "createdBy": "f0d247d2-bd7b-464f-ba11-b65826cc63ae",
+      "createdByName": "apresentacao sobrenome"
+    },
+    "createdAt": "2025-09-27T21:11:58.691Z",
+    "updatedAt": "2025-09-27T21:11:58.691Z"
+  },
+  {
+    "id": "f7b676ce-9582-4e75-9a90-de41a246aca8",
+    "name": "Pão sírio",
+    "description": "Pão sírio",
+    "price": 6,
+    "stock": 30,
+    "category": {
+      "name": "Padaria",
+      "slug": "Pão"
+    },
+    "images": [],
+    "tags": [
+      "padaria",
+      "pão"
+    ],
+    "specifications": {},
+    "active": true,
+    "featured": false,
+    "metadata": {
+      "createdBy": "f0d247d2-bd7b-464f-ba11-b65826cc63ae",
+      "createdByName": "apresentacao sobrenome"
+    },
+    "createdAt": "2025-09-27T21:12:33.450Z",
+    "updatedAt": "2025-09-27T21:12:33.450Z"
+  },
+  {
+    "id": "e7a90e17-9cfc-489f-aae1-0c77f11ed06f",
+    "name": "PC Gamer2",
+    "description": "Pc gamer i59400f, 1660 super",
+    "price": 5000,
+    "stock": 3,
+    "category": {
+      "name": "Eletrônicos",
+      "slug": "eletronicos"
+    },
+    "images": [
+      ""
+    ],
+    "tags": [
+      "computador",
+      "tech"
+    ],
+    "specifications": {
+      "brand": "Pichau",
+      "model": "pc gamer",
+      "storage": "1T",
+      "ram": "16GB"
+    },
+    "active": true,
+    "featured": false,
+    "metadata": {
+      "createdBy": "b7de4c95-1f0f-43d6-8d38-274e1ab4e1f0",
+      "createdByName": "apresentacao2 sobrenome2"
+    },
+    "createdAt": "2025-09-27T21:27:20.710Z",
+    "updatedAt": "2025-09-27T21:27:20.710Z"
+  },
+  {
+    "id": "419113a8-9f5a-4cd4-a8a9-0c6f237b134d",
+    "name": "Pão sírio2",
+    "description": "Pão sírio",
+    "price": 6,
+    "stock": 30,
+    "category": {
+      "name": "Padaria",
+      "slug": "Pão"
+    },
+    "images": [],
+    "tags": [
+      "padaria",
+      "pão"
+    ],
+    "specifications": {},
+    "active": true,
+    "featured": false,
+    "metadata": {
+      "createdBy": "f0d247d2-bd7b-464f-ba11-b65826cc63ae",
+      "createdByName": "apresentacao sobrenome"
+    },
+    "createdAt": "2025-09-27T21:27:36.400Z",
+    "updatedAt": "2025-09-27T21:27:36.400Z"
   }
 ]
