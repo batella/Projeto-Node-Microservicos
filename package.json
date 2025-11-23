@@ -44,6 +44,7 @@
 "npm": ">=8.0.0"
 },
 "dependencies": {
+"amqplib": "^0.10.3",
 "axios": "^1.6.0",
 "fs-extra": "^11.1.0",
 "uuid": "^9.0.0"

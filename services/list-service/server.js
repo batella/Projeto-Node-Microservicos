@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const JsonDatabase = require('../../shared/JsonDatabase');
 const axios = require('axios');
+const rabbitmq = require('./rabbitmqProducer');
 const app = express();
 const PORT = 3004;
 
@@ -275,6 +276,96 @@ app.delete('/lists/:id/items/:itemId', authenticateToken, async (req, res) => {
   updateListSummary(list);
   await db.update(list.id, list);
   res.json(list);
+});
+
+// POST /lists/:id/checkout - Finalizar compra (com RabbitMQ)
+app.post('/lists/:id/checkout', authenticateToken, async (req, res) => {
+  console.log(`[List Service] POST /lists/${req.params.id}/checkout - userId: ${req.user.id}`);
+  const userId = req.user.id;
+  
+  try {
+    // Buscar a lista
+    const list = await db.findOne({ id: req.params.id, userId });
+    if (!list) {
+      return res.status(404).json({ 
+        success: false,
+        error: 'Lista não encontrada' 
+      });
+    }
+
+    // Buscar informações do usuário
+    const userService = serviceRegistry.discover('user-service');
+    let userEmail = 'unknown@example.com';
+    let userName = 'Usuário';
+    
+    try {
+      const authHeader = req.header('Authorization');
+      const userResponse = await axios.get(`${userService.url}/users/${userId}`, {
+        headers: { Authorization: authHeader },
+        timeout: 5000
+      });
+      
+      if (userResponse.data && userResponse.data.data) {
+        userEmail = userResponse.data.data.email || userEmail;
+        userName = userResponse.data.data.name || userName;
+      }
+    } catch (error) {
+      console.log('[List Service] Não foi possível buscar dados do usuário, usando valores padrão');
+    }
+
+    // Calcular total
+    const totalGasto = list.items.reduce((sum, item) => 
+      sum + (item.estimatedPrice || 0) * (item.quantity || 1), 0
+    );
+
+    // Atualizar status da lista
+    list.status = 'completed';
+    list.completedAt = new Date().toISOString();
+    await db.update(list.id, list);
+
+    // Preparar mensagem para RabbitMQ
+    const checkoutMessage = {
+      listId: list.id,
+      userId: userId,
+      userEmail: userEmail,
+      userName: userName,
+      listName: list.name,
+      totalItems: list.items.length,
+      totalGasto: totalGasto,
+      items: list.items,
+      completedAt: list.completedAt,
+      timestamp: new Date().toISOString()
+    };
+
+    // Publicar mensagem no RabbitMQ de forma assíncrona
+    // Não aguardamos a publicação para retornar 202 imediatamente
+    rabbitmq.publishMessage('list.checkout.completed', checkoutMessage)
+      .then(() => {
+        console.log(`[List Service] ✅ Evento de checkout publicado para lista ${list.id}`);
+      })
+      .catch((error) => {
+        console.error(`[List Service] ❌ Erro ao publicar evento de checkout:`, error.message);
+      });
+
+    // Retornar 202 Accepted imediatamente
+    return res.status(202).json({
+      success: true,
+      message: 'Checkout iniciado com sucesso',
+      data: {
+        listId: list.id,
+        status: 'processing',
+        totalGasto: totalGasto,
+        totalItems: list.items.length
+      }
+    });
+
+  } catch (error) {
+    console.error('[List Service] Erro no checkout:', error.message);
+    return res.status(500).json({
+      success: false,
+      error: 'Erro ao processar checkout'
+    });
+  }
 });
 
 app.get('/health', (req, res) => {

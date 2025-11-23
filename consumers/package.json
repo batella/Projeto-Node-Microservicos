@@ -1,0 +1,17 @@
+{
+  "name": "rabbitmq-consumers",
+  "version": "1.0.0",
+  "description": "RabbitMQ consumers for shopping list events",
+  "scripts": {
+    "start:log": "node logConsumer.js",
+    "start:analytics": "node analyticsConsumer.js",
+    "start:all": "concurrently \"npm run start:log\" \"npm run start:analytics\""
+  },
+  "dependencies": {
+    "amqplib": "^0.10.3",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  }
+}
