@@ -208,5 +208,339 @@
     },
     "createdAt": "2025-09-27T21:23:20.402Z",
     "updatedAt": "2025-09-27T21:23:22.112Z"
+  },
+  {
+    "id": "3ac3811f-b4ca-4718-889c-ca42ce4b5c80",
+    "userId": "7eb62a37-0254-4e05-8138-9834a5edeb3b",
+    "name": "Lista caio teste",
+    "description": "Lista de teste",
+    "status": "active",
+    "items": [
+      {
+        "itemId": "7231d87f-da43-4995-b387-8a5910a5e718",
+        "itemName": "Fone Bluetooth",
+        "quantity": "7",
+        "unit": "",
+        "estimatedPrice": 299.99,
+        "purchased": false,
+        "notes": "",
+        "addedAt": "2025-11-20T00:52:02.400Z"
+      },
+      {
+        "itemId": "58b0230c-b2e9-4154-9032-3c2cf55403e7",
+        "itemName": "Esponja Multiuso",
+        "quantity": 5,
+        "unit": "",
+        "estimatedPrice": 3.49,
+        "purchased": false,
+        "notes": "",
+        "addedAt": "2025-11-20T00:52:02.443Z"
+      }
+    ],
+    "summary": {
+      "totalItems": 2,
+      "purchasedItems": 0,
+      "estimatedTotal": 2117.38
+    },
+    "createdAt": "2025-11-20T00:52:02.457Z",
+    "updatedAt": "2025-11-20T00:52:02.460Z"
+  },
+  {
+    "id": "055ba31e-c7af-4e31-925a-53b6b77c469c",
+    "userId": "7eb62a37-0254-4e05-8138-9834a5edeb3b",
+    "name": "Lista caio teste",
+    "description": "Lista de teste",
+    "status": "completed",
+    "items": [
+      {
+        "itemId": "7231d87f-da43-4995-b387-8a5910a5e718",
+        "itemName": "Fone Bluetooth",
+        "quantity": 7,
+        "unit": "",
+        "estimatedPrice": 299.99,
+        "purchased": false,
+        "notes": "",
+        "addedAt": "2025-11-22T18:12:08.075Z"
+      },
+      {
+        "itemId": "58b0230c-b2e9-4154-9032-3c2cf55403e7",
+        "itemName": "Esponja Multiuso",
+        "quantity": 5,
+        "unit": "",
+        "estimatedPrice": 3.49,
+        "purchased": false,
+        "notes": "",
+        "addedAt": "2025-11-22T18:12:08.089Z"
+      }
+    ],
+    "summary": {
+      "totalItems": 2,
+      "purchasedItems": 0,
+      "estimatedTotal": 2117.38
+    },
+    "createdAt": "2025-11-22T18:12:08.156Z",
+    "updatedAt": "2025-11-22T18:17:50.378Z",
+    "completedAt": "2025-11-22T18:17:50.375Z"
+  },
+  {
+    "id": "ee5400ce-4b2a-42f5-9366-7f8549a0c801",
+    "userId": "bbdd0505-42fc-4184-80f3-144103a62a52",
+    "name": "Lista caio teste",
+    "description": "Lista de teste",
+    "status": "completed",
+    "items": [
+      {
+        "itemId": "7231d87f-da43-4995-b387-8a5910a5e718",
+        "itemName": "Fone Bluetooth",
+        "quantity": 7,
+        "unit": "",
+        "estimatedPrice": 299.99,
+        "purchased": false,
+        "notes": "",
+        "addedAt": "2025-11-23T19:42:57.596Z"
+      },
+      {
+        "itemId": "58b0230c-b2e9-4154-9032-3c2cf55403e7",
+        "itemName": "Esponja Multiuso",
+        "quantity": 5,
+        "unit": "",
+        "estimatedPrice": 3.49,
+        "purchased": false,
+        "notes": "",
+        "addedAt": "2025-11-23T19:42:57.611Z"
+      }
+    ],
+    "summary": {
+      "totalItems": 2,
+      "purchasedItems": 0,
+      "estimatedTotal": 2117.38
+    },
+    "createdAt": "2025-11-23T19:42:57.675Z",
+    "updatedAt": "2025-11-23T19:43:30.497Z",
+    "completedAt": "2025-11-23T19:43:30.492Z"
+  },
+  {
+    "id": "606976fe-b0c0-46d4-a53f-4c435a1c972e",
+    "userId": "bbdd0505-42fc-4184-80f3-144103a62a52",
+    "name": "Lista caio teste",
+    "description": "Lista de teste",
+    "status": "active",
+    "items": [
+      {
+        "itemId": "7231d87f-da43-4995-b387-8a5910a5e718",
+        "itemName": "Fone Bluetooth",
+        "quantity": 7,
+        "unit": "",
+        "estimatedPrice": 299.99,
+        "purchased": false,
+        "notes": "",
+        "addedAt": "2025-11-23T19:46:22.013Z"
+      },
+      {
+        "itemId": "58b0230c-b2e9-4154-9032-3c2cf55403e7",
+        "itemName": "Esponja Multiuso",
+        "quantity": 5,
+        "unit": "",
+        "estimatedPrice": 3.49,
+        "purchased": false,
+        "notes": "",
+        "addedAt": "2025-11-23T19:46:22.038Z"
+      }
+    ],
+    "summary": {
+      "totalItems": 2,
+      "purchasedItems": 0,
+      "estimatedTotal": 2117.38
+    },
+    "createdAt": "2025-11-23T19:46:22.043Z",
+    "updatedAt": "2025-11-23T19:46:22.050Z"
+  },
+  {
+    "id": "6c394947-376d-42a5-ac2c-6ceb69582265",
+    "userId": "bbdd0505-42fc-4184-80f3-144103a62a52",
+    "name": "Lista blabla",
+    "description": "Lista de teste",
+    "status": "completed",
+    "items": [
+      {
+        "itemId": "7231d87f-da43-4995-b387-8a5910a5e718",
+        "itemName": "Fone Bluetooth",
+        "quantity": 7,
+        "unit": "",
+        "estimatedPrice": 299.99,
+        "purchased": false,
+        "notes": "",
+        "addedAt": "2025-11-23T19:46:31.420Z"
+      },
+      {
+        "itemId": "58b0230c-b2e9-4154-9032-3c2cf55403e7",
+        "itemName": "Esponja Multiuso",
+        "quantity": 5,
+        "unit": "",
+        "estimatedPrice": 3.49,
+        "purchased": false,
+        "notes": "",
+        "addedAt": "2025-11-23T19:46:31.428Z"
+      }
+    ],
+    "summary": {
+      "totalItems": 2,
+      "purchasedItems": 0,
+      "estimatedTotal": 2117.38
+    },
+    "createdAt": "2025-11-23T19:46:31.428Z",
+    "updatedAt": "2025-11-23T19:46:47.476Z",
+    "completedAt": "2025-11-23T19:46:47.474Z"
+  },
+  {
+    "id": "e2de9157-d50d-413e-a9d6-aec1d066bbda",
+    "userId": "a268a4e5-74f0-4d92-b9ab-c326078fab31",
+    "name": "Lista blabla",
+    "description": "Lista de teste",
+    "status": "completed",
+    "items": [
+      {
+        "itemId": "7231d87f-da43-4995-b387-8a5910a5e718",
+        "itemName": "Fone Bluetooth",
+        "quantity": 7,
+        "unit": "",
+        "estimatedPrice": 299.99,
+        "purchased": false,
+        "notes": "",
+        "addedAt": "2025-11-23T19:54:10.598Z"
+      },
+      {
+        "itemId": "58b0230c-b2e9-4154-9032-3c2cf55403e7",
+        "itemName": "Esponja Multiuso",
+        "quantity": 5,
+        "unit": "",
+        "estimatedPrice": 3.49,
+        "purchased": false,
+        "notes": "",
+        "addedAt": "2025-11-23T19:54:10.612Z"
+      }
+    ],
+    "summary": {
+      "totalItems": 2,
+      "purchasedItems": 0,
+      "estimatedTotal": 2117.38
+    },
+    "createdAt": "2025-11-23T19:54:10.622Z",
+    "updatedAt": "2025-11-23T19:54:20.841Z",
+    "completedAt": "2025-11-23T19:54:20.839Z"
+  },
+  {
+    "id": "fce3d47f-5368-4616-8b6a-2084faab3099",
+    "userId": "a268a4e5-74f0-4d92-b9ab-c326078fab31",
+    "name": "Lista jantar",
+    "description": "Lista de itens para o jantar",
+    "status": "completed",
+    "items": [
+      {
+        "itemId": "7231d87f-da43-4995-b387-8a5910a5e718",
+        "itemName": "Fone Bluetooth",
+        "quantity": 7,
+        "unit": "",
+        "estimatedPrice": 299.99,
+        "purchased": false,
+        "notes": "",
+        "addedAt": "2025-11-23T20:07:49.025Z"
+      },
+      {
+        "itemId": "58b0230c-b2e9-4154-9032-3c2cf55403e7",
+        "itemName": "Esponja Multiuso",
+        "quantity": 5,
+        "unit": "",
+        "estimatedPrice": 3.49,
+        "purchased": false,
+        "notes": "",
+        "addedAt": "2025-11-23T20:07:49.039Z"
+      },
+      {
+        "itemId": "419113a8-9f5a-4cd4-a8a9-0c6f237b134d",
+        "itemName": "Pão sírio2",
+        "quantity": 6,
+        "unit": "",
+        "estimatedPrice": 6,
+        "purchased": false,
+        "notes": "",
+        "addedAt": "2025-11-23T20:07:49.054Z"
+      },
+      {
+        "itemId": "04a85804-2a71-46dc-a1ae-58b8d75ea3e0",
+        "itemName": "Rosquinha de Coco",
+        "quantity": 2,
+        "unit": "",
+        "estimatedPrice": 7.99,
+        "purchased": false,
+        "notes": "",
+        "addedAt": "2025-11-23T20:07:49.066Z"
+      }
+    ],
+    "summary": {
+      "totalItems": 4,
+      "purchasedItems": 0,
+      "estimatedTotal": 2169.36
+    },
+    "createdAt": "2025-11-23T20:07:49.141Z",
+    "updatedAt": "2025-11-23T20:08:06.609Z",
+    "completedAt": "2025-11-23T20:08:06.606Z"
+  },
+  {
+    "id": "e993d1c5-c83f-4499-a723-6c8d3e428463",
+    "userId": "a268a4e5-74f0-4d92-b9ab-c326078fab31",
+    "name": "Lista supermercado",
+    "description": "Lista de itens para compra semanal",
+    "status": "completed",
+    "items": [
+      {
+        "itemId": "7231d87f-da43-4995-b387-8a5910a5e718",
+        "itemName": "Fone Bluetooth",
+        "quantity": 7,
+        "unit": "",
+        "estimatedPrice": 299.99,
+        "purchased": false,
+        "notes": "",
+        "addedAt": "2025-11-23T20:14:02.147Z"
+      },
+      {
+        "itemId": "58b0230c-b2e9-4154-9032-3c2cf55403e7",
+        "itemName": "Esponja Multiuso",
+        "quantity": 5,
+        "unit": "",
+        "estimatedPrice": 3.49,
+        "purchased": false,
+        "notes": "",
+        "addedAt": "2025-11-23T20:14:02.157Z"
+      },
+      {
+        "itemId": "419113a8-9f5a-4cd4-a8a9-0c6f237b134d",
+        "itemName": "Pão sírio2",
+        "quantity": 6,
+        "unit": "",
+        "estimatedPrice": 6,
+        "purchased": false,
+        "notes": "",
+        "addedAt": "2025-11-23T20:14:02.166Z"
+      },
+      {
+        "itemId": "04a85804-2a71-46dc-a1ae-58b8d75ea3e0",
+        "itemName": "Rosquinha de Coco",
+        "quantity": 2,
+        "unit": "",
+        "estimatedPrice": 7.99,
+        "purchased": false,
+        "notes": "",
+        "addedAt": "2025-11-23T20:14:02.178Z"
+      }
+    ],
+    "summary": {
+      "totalItems": 4,
+      "purchasedItems": 0,
+      "estimatedTotal": 2169.36
+    },
+    "createdAt": "2025-11-23T20:14:02.181Z",
+    "updatedAt": "2025-11-23T20:14:50.800Z",
+    "completedAt": "2025-11-23T20:14:50.798Z"
   }
 ]

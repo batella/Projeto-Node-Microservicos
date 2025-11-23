@@ -370,5 +370,86 @@
     "updatedAt": "2025-09-27T21:26:19.482Z",
     "metadata.lastLogin": "2025-09-27T21:26:19.477Z",
     "metadata.loginCount": 1
+  },
+  {
+    "id": "7eb62a37-0254-4e05-8138-9834a5edeb3b",
+    "email": "caio",
+    "username": "caio",
+    "password": "$2a$12$BDiozwK3K5vNbpkmSSjozO9Gb8YCDpEWcX/ygPlduRYWsflYUNXKC",
+    "firstName": "caio",
+    "lastName": "caio",
+    "role": "user",
+    "status": "active",
+    "profile": {
+      "bio": null,
+      "avatar": null,
+      "preferences": {
+        "theme": "light",
+        "language": "pt-BR"
+      }
+    },
+    "metadata": {
+      "registrationDate": "2025-11-20T00:50:18.902Z",
+      "lastLogin": null,
+      "loginCount": 0
+    },
+    "createdAt": "2025-11-20T00:50:18.904Z",
+    "updatedAt": "2025-11-22T18:09:29.430Z",
+    "metadata.lastLogin": "2025-11-22T18:09:29.428Z",
+    "metadata.loginCount": 1
+  },
+  {
+    "id": "bbdd0505-42fc-4184-80f3-144103a62a52",
+    "email": "apresentacao@exemplo.com",
+    "username": "userapresentacao",
+    "password": "$2a$12$Yp9p.ygFESSslRo4bmJBle3N0KuFg9lp/FPftu346NfQMJ66QcYe.",
+    "firstName": "Caio",
+    "lastName": "Batella",
+    "role": "user",
+    "status": "active",
+    "profile": {
+      "bio": null,
+      "avatar": null,
+      "preferences": {
+        "theme": "light",
+        "language": "pt-BR"
+      }
+    },
+    "metadata": {
+      "registrationDate": "2025-11-23T19:42:12.789Z",
+      "lastLogin": null,
+      "loginCount": 0
+    },
+    "createdAt": "2025-11-23T19:42:12.791Z",
+    "updatedAt": "2025-11-23T19:42:32.125Z",
+    "metadata.lastLogin": "2025-11-23T19:42:32.123Z",
+    "metadata.loginCount": 1
+  },
+  {
+    "id": "a268a4e5-74f0-4d92-b9ab-c326078fab31",
+    "email": "caio@email.com",
+    "username": "caio_batella",
+    "password": "$2a$12$zN0uOJOWWQqqKRgHomheTe9iJhJ.c5C.HtenaNwgsI99U8LpO4K/S",
+    "firstName": "Caio",
+    "lastName": "Batella",
+    "role": "user",
+    "status": "active",
+    "profile": {
+      "bio": null,
+      "avatar": null,
+      "preferences": {
+        "theme": "light",
+        "language": "pt-BR"
+      }
+    },
+    "metadata": {
+      "registrationDate": "2025-11-23T19:53:22.017Z",
+      "lastLogin": null,
+      "loginCount": 0
+    },
+    "createdAt": "2025-11-23T19:53:22.019Z",
+    "updatedAt": "2025-11-23T20:04:52.508Z",
+    "metadata.lastLogin": "2025-11-23T20:04:52.505Z",
+    "metadata.loginCount": 1
   }
 ]
